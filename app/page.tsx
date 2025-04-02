@@ -8,8 +8,8 @@ interface PromptType {
   id: string;
   name: string;
   text: string;
-  createdAt: string;
-  modifiedAt: string;
+  createdat: string;
+  modifiedat: string;
 }
 const Page = () => {
   const queryClient = useQueryClient();
