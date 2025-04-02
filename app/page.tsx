@@ -69,8 +69,8 @@ const Page = () => {
           id={prompt.id}
           promptName={prompt.name}
           promptText={prompt.text}
-          createdAt={prompt.createdAt}
-          modifiedAt={prompt.modifiedAt}
+          createdat={prompt.createdat}
+          modifiedat={prompt.modifiedat}
           onDelete={() => deleteMutation.mutate(prompt.id)}
           onUpdate={(newText: string) =>
             updateMutation.mutate({ id: prompt.id, newText })
