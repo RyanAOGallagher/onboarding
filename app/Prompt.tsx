@@ -4,12 +4,12 @@ const Prompt = (props: {
   id: string;
   promptName: string;
   promptText: string;
-  createdat: string;
-  modifiedat: string;
+  createdAt: string;
+  modifiedAt: string;
   onDelete: () => void;
   onUpdate: (newText: string) => void;
 }) => {
-  const { promptName, promptText, createdat, modifiedat, onDelete, onUpdate } =
+  const { promptName, promptText, createdAt, modifiedAt, onDelete, onUpdate } =
     props;
 
   const [isEditing, setIsEditing] = useState(false);
@@ -43,9 +43,9 @@ const Prompt = (props: {
       ) : (
         <p>{newText}</p>
       )}
-      <small>Created At: {formatDate(createdat)}</small>
+      <small>Created At: {formatDate(createdAt)}</small>
       <br />
-      <small>Last Modified: {formatDate(modifiedat)}</small>
+      <small>Last Modified: {formatDate(modifiedAt)}</small>
       <br />
 
       {isEditing ? (

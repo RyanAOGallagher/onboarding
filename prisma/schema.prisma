@@ -8,9 +8,9 @@ datasource db {
 }
 
 model prompt {
-  id         Int       @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   name       String
   text       String
-  createdat  DateTime? @default(now()) @db.Timestamp(6)
-  modifiedat DateTime? @default(now()) @db.Timestamp(6)
+  createdAt  DateTime @default(now())
+  modifiedAt DateTime
 }

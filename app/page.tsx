@@ -8,8 +8,8 @@ interface PromptType {
   id: string;
   name: string;
   text: string;
-  createdat: string;
-  modifiedat: string;
+  createdAt: string;
+  modifiedAt: string;
 }
 const Page = () => {
   const queryClient = useQueryClient();
@@ -69,8 +69,8 @@ const Page = () => {
           id={prompt.id}
           promptName={prompt.name}
           promptText={prompt.text}
-          createdat={prompt.createdat}
-          modifiedat={prompt.modifiedat}
+          createdAt={prompt.createdAt}
+          modifiedAt={prompt.modifiedAt}
           onDelete={() => deleteMutation.mutate(prompt.id)}
           onUpdate={(newText: string) =>
             updateMutation.mutate({ id: prompt.id, newText })

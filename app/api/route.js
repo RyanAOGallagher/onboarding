@@ -10,7 +10,7 @@ export async function POST(request) {
       data: {
         name,
         text,
-        createdat: new Date(),
+        createdAt: new Date(),
         modifiedAt: new Date(),
       },
     });
@@ -35,7 +35,7 @@ export async function POST(request) {
 export async function GET() {
   try {
     const prompts = await prisma.prompt.findMany({
-      orderBy: { createdat: "desc" },
+      orderBy: { createdAt: "desc" },
     });
 
     return NextResponse.json(
